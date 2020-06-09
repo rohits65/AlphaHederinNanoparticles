@@ -1,5 +1,7 @@
 module DataMining
-using PlotlyJS
+
+using DelimitedFiles
+
 function mine_data()
     # Open data file
     data = undef
@@ -60,8 +62,13 @@ function mine_data()
         end # for
         return titles
     end # function
-    
-    println(get_articletitles(30))
+
+    open("../data/public/hittitles.txt", "w") do file
+        titles = get_articletitles(30)
+        for title in titles
+            write(file, title*"\n")
+        end # for
+    end
 end # function
 
 function score(article::Array{String})
