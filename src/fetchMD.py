@@ -11,4 +11,3 @@ def fetchMD(drugName):
     except:
         return (None, None, None, None)
     # end try
-print(fetchMD("valproic acid"))
