@@ -5,7 +5,12 @@ import pandas as pd
 # ML dependencies
 from sklearn.metrics import explained_variance_score
 from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
 from sklearn.neural_network import MLPRegressor
+
+# Graphing
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 # To save the model
 from joblib import dump, load
@@ -24,6 +29,8 @@ def clean_data() -> tuple:
 
 x, y = clean_data()
 
+scaler = StandardScaler()
+
 # Create a neural network
 
 '''
@@ -33,7 +40,7 @@ x, y = clean_data()
     and modify from there.
 @param random_state: Don't touch. 
 '''
-regr = MLPRegressor(solver='lbfgs', alpha=0.36, hidden_layer_sizes=(3, 5), random_state=9, max_iter=1000)
+regr = MLPRegressor(solver='lbfgs', alpha=0.21, hidden_layer_sizes=(3, 6), random_state=3, max_iter=1000)
 
 # Data processing function
 '''
@@ -49,13 +56,14 @@ def processData(raw_x_data, raw_y_data) -> tuple:
 
 
 X_train, y_train, X_test, y_test = processData(x, y)
+X_train = scaler.fit_transform(X_train)
 
 # Fit the regression
 regr.fit(X_train, y_train)
 
 # For manual evaluation
-print(X_test, ":\n", regr.predict(X_test))
-
+print(X_test, ":\n", regr.predict(scaler.transform(X_test)))
+X_test = scaler.transform(X_test)
 # Accuracy
 # The below value should be as close to 1 as possible; play with the params in MLPRegressor
 print(explained_variance_score(y_test, regr.predict(X_test)))
@@ -69,9 +77,23 @@ print(explained_variance_score(np.vstack([y_test, y_train]), regr.predict(np.vst
 # print(regr.n_layers_)
 # print(regr.hidden_layer_sizes)
 
-print(regr.predict([[129, 383, 135.0, 243.22, 1 ,-2.1]]))
+print(regr.predict(scaler.transform([np.array([129, 383, 135.0, 243.22, 1 ,-2.1])])))
+results = []
+for i in range(1, 4):
+    results.append(regr.predict(scaler.transform([np.array([196, 1140, 135, 751, i ,3.6])]))[0])
+
+results = pd.DataFrame(
+    range(1,4),
+    results
+)
+print(results)
+sns.set()
+sns.relplot(data=results)
+plt.show()
 
 # Save the model once fully optimized
-dump(regr, "../savedStates/bindingEnergy_model.joblib")
-model = load("../savedStates/bindingEnergy_model.joblib")
+dump(regr, "../savedStates/bindingEnergy2_model.joblib")
+model = load("../savedStates/bindingEnergy2_model.joblib")
 # print(model.predict([[129, 135.0]]))
+
+
