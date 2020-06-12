@@ -38,7 +38,7 @@ regr = MLPRegressor(solver='lbfgs', alpha=0, hidden_layer_sizes=(4, 4), random_s
 
 # Data processing function
 '''
-@param x: numpy arary 
+@param x: numpy array 
 @param y: numpy array
 '''
 
