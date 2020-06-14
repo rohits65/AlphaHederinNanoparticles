@@ -92,8 +92,8 @@ sns.relplot(data=results)
 plt.show()
 
 # Save the model once fully optimized
-dump(regr, "../savedStates/bindingEnergy2_model.joblib")
-model = load("../savedStates/bindingEnergy2_model.joblib")
+dump((regr, scaler), "../savedStates/bindingEnergy2_model.joblib")
+model, scaler = load("../savedStates/bindingEnergy2_model.joblib")
 # print(model.predict([[129, 135.0]]))
 
 

@@ -1,26 +1,0 @@
-name,solventType,solventProportion,PLGAtodrug,stirTime,MPS,MW,xlogP,TPSA,CX,ZP,LToG,BE,EE,RR (when slope decreases drastic) in hours,RR (Amount when slope decrease drastically) (%),source,,,,,,99
-docetaxel,,,10,,269.4,807.9,1.6,224,1660,,1,-9.5,97.4,37,26,doi:10.2147/ijn.s24547,,,,,,99
-paclitaxel,acetone,0.25,10,,123,853.9,2.5,221,1790,,1,-9,90,36,35,doi:10.1016/j.colsurfb.2014.10.007,,,,,,99
-triamcinolone acetonide,,,10,,195,434.5,2.5,93.1,925,,1,-8.6,31.67,11,53,"Sabzevari, A., Adibkia, K., Hashemi, H., Hedayatfar, A., Mohsenzadeh, N., Atyabi, F., … Dinarvand, R. (2013). Polymeric triamcinolone acetonide nanoparticles as a new alternative in the treatment of uveitis: In vitro and in vivo studies. European Journal of Pharmaceutics and Biopharmaceutics, 84(1), 63–71. doi:10.1016/j.ejpb.2012.12.010 ",,,,,,99
-indomethacin,acetone,0.067,30,10,167.6,357.8,4.3,68.5,506,,3,-7.8,93.9,,,https://www.sciencedirect.com/science/article/abs/pii/S0928098704002507,,,,,,99
-cyclosporin A,acetone,0.067,30,10,169.2,1202.6,7.5,279,2330,,3,-8.9,83.7,,,https://www.sciencedirect.com/science/article/abs/pii/S0928098704002507,,,,,,99
-ketoprofen,acetone,0.067,30,10,167.4,254.28,3.1,54.4,331,,3,-8.2,46.2,2,38,https://www.sciencedirect.com/science/article/abs/pii/S0928098704002507,,,,,,99
-cytarabine,methanol,0.024,10,20,135,243.22,-2.1,129,383,,1,-6.9,20,,,https://drive.google.com/file/d/1Z92QR4QNGbBfgkGCbkBdYh0xuPbQD-OD/view?usp=sharing,,,,,,99
-vancomycin,acetone,0.067,30,10,186.9,1449.2,-2.6,531,2960,,3,-7.8,12.1,,,https://www.sciencedirect.com/science/article/abs/pii/S0928098704002507,,,,,,99
-phenobarbital,acetone,0.067,30,10,157.4,232.23,1.5,75.3,339,,3,-7.2,9.4,,,https://www.sciencedirect.com/science/article/abs/pii/S0928098704002507,,,,,,99
-valproic acid,acetone,0.067,30,10,166.2,144.21,2.8,37.3,93,,3,-5.4,5.6,,,https://www.sciencedirect.com/science/article/abs/pii/S0928098704002507,,,,,,99
-rifampicin,acetonitrile,,,3600,260.3,822.9,4.9,220,1620,,1,,76.25,8,68,doi:10.1007/s11095-018-2543-x ,,,,,,99
- dexamethasone,,,6,,204,392.5,1.9,94.8,805,,1,,77.3,7,88,"doi: 10.1089/jop.2009.0074.",,,,,,99
-hydrocortisone acetate,,,6,,226,404.5,2.2,101,786,,1,,91.3,6,67,"doi: 10.1089/jop.2009.0074.",,,,,,99
-prednisolone acetate,,,6,,183,402.5,2.4,101,827,,1,,92.3,6,66,"doi: 10.1089/jop.2009.0074.",,,,,,99
-dexamethasone,,,6,,203,392.5,1.9,94.8,805,,2,,76.6,50,45,"doi: 10.1089/jop.2009.0074.",,,,,,99
-hydrocortisone acetate,,,6,,214,404.5,2.2,101,786,,2,,92.3,5,62,"doi: 10.1089/jop.2009.0074.",,,,,,99
-prednisolone acetate,,,6,,193,402.5,2.4,101,827,,2,,94.3,6,58,"doi: 10.1089/jop.2009.0074.",,,,,,99
-Oleanolic acid,acetone,0.055,18,,213.7,456.7,7.5,57.5,885,,3,,76.75,28,73,10.1016/j.nano.2015.01.004,,,,,,99
-ursolic acid,acetone,0.055,18,,214.9,456.7,7.3,57.5,874,,3,,71.63,28,73,10.1016/j.nano.2015.01.004,,,,,,99
-Eluxadoline ,ethyl acetate,0.033,12,,273.76,569.6,0.9,165,917,,3,,56.29,5,75,10.3389/fphar.2017.00844.,,,,,,99
-Minocycline,dimethyl sulfoxide,0.04,2.5,,85,457.5,-0.6,165,971,,1,,0.81,,,10.2147/IJN.S27709,,,,,,
-Minocycline,,,2.3,,193,457.5,-0.6,165,971,,1,,3.85,8,18,10.2147/IJN.S27709,,,,,,
-hydrochlorothiazide,,,1,,570.9,297.7,-0.1,135,494,,1,,29.34,175,26,10.1371/journal.pone.0128208,,,,,,
-candesartan,,,1,,898.5,440.5,4.1,119,660,,1,,33.5,168,100,10.1371/journal.pone.0128209,,,,,,
-amlodipine besylate,,,1,,643.3,408.9,3,99.9,647,,1,,42,120,100,10.1371/journal.pone.0128210,,,,,,

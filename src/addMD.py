@@ -19,7 +19,7 @@ sh = gc.open('DrugData') # open spreadsheet
 # Or 
 wk1 = sh.worksheet_by_title("main") # sheet1 is name of first worksheet
 # print(sh.worksheets)
-for row in range(32,35):
+for row in range(50,51):
     if wk1.cell('G'+str(row)).value == '':
         data = fmd.fetchMD(wk1.cell('A'+str(row)).value)
         wk1.cell('G'+str(row)).set_value(data[0])
