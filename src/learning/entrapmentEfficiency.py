@@ -9,8 +9,8 @@ from joblib import dump
 data = pd.read_csv("../../data/DrugData - main.csv").dropna(subset=['EE', 'LToG', 'PLGAtodrug'])
 
 # Get the columns associated with x, y
-x_values = data[['MW', 'CX', 'LToG', 'TPSA', 'PLGAtodrug', 'xlogP']].to_numpy().reshape(-1, 6)[0:30]  # Change last num_params
-y_values = np.ravel(data[['EE']].to_numpy())[0:30] # .reshape(-1, 1)
+x_values = data[['MW', 'CX', 'LToG', 'TPSA', 'PLGAtodrug', 'xlogP']].to_numpy().reshape(-1, 6)[0:40]  # Change last num_params
+y_values = np.ravel(data[['EE']].to_numpy())[0:40] # .reshape(-1, 1)
 y_values = [val/100 for val in y_values]
 
 X = x_values#dataset[:, :-1]
@@ -46,7 +46,7 @@ model.add(Dense(units = 1))
 model.compile(optimizer = 'adam', loss = 'mean_squared_error')
 
 # Fitting the ANN to the Training set
-model.fit(X_train, y_train, batch_size = 10, epochs = 100)
+model.fit(X_train, y_train, batch_size = 10, epochs = 200)
 model.save("../savedStates/entrapmentEfficiency_model.savedstate")
 
 model = load_model("../savedStates/entrapmentEfficiency_model.savedstate")

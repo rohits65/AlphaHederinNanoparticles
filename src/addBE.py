@@ -19,12 +19,14 @@ sh = gc.open('DrugData') # open spreadsheet
 
 # wk1 = sh[0] #Open first worksheet of spreadsheet
 # Or
-wk1 = sh.worksheet_by_title("temp") # sheet1 is name of first worksheet
+wk1 = sh.worksheet_by_title("main") # sheet1 is name of first worksheet
 # print(sh.worksheets)
+# model = load_model("savedStates/releaseRate_model.savedstate")
+# sc = load("savedStates/releaseRate_scaler.savedstate")
 model = load_model("savedStates/entrapmentEfficiency_model.savedstate")
 sc = load("savedStates/entrapmentEfficiency_scaler.savedstate")
 
-for row in range(38,40):
+for row in range(51,54):
         try:
 
                 print('red')
@@ -38,11 +40,14 @@ for row in range(38,40):
                 hrs = wk1.cell('O'+str(row)).value
                 pdr = wk1.cell('D'+str(row)).value
 
-
+                #RR
+                # data = model.predict(np.array(sc.transform([np.array([xlog, EE, tpsa, mw, cx, lg])])).reshape(-1, 6))[0][0]
+                #EE
                 data = model.predict(np.array(sc.transform([np.array([mw, cx, lg, tpsa, pdr, xlog])])).reshape(-1, 6))[0][0]
+
                 print('blue')
 
-                wk1.cell('Q'+str(row)).set_value(str(data))
+                wk1.cell('T'+str(row)).set_value(str(data))
                 print('green')
 
 
