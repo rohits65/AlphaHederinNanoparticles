@@ -17,7 +17,7 @@ X = x_values#dataset[:, :-1]
 y = y_values#dataset[:, -1]
 
 # Splitting the dataset into the Training set and Test set
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.1, random_state = 0)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 0)
 
 # Feature Scaling
 from sklearn.preprocessing import StandardScaler
@@ -43,7 +43,7 @@ model.add(Dense(units = 1))
 
 #model.add(Dense(1))
 # Compiling the ANN
-model.compile(optimizer = 'adadelta', loss = 'mean_squared_error')
+model.compile(optimizer = 'adam', loss = 'mean_absolute_error')
 
 # Fitting the ANN to the Training set
 model.fit(X_train, y_train, batch_size = 80, epochs = 750, validation_data=(X_test, y_test))

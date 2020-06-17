@@ -62,15 +62,20 @@ def MPSGraph():
 def EEGraph():
     fig = go.Figure()
 
-    for i in np.arange(1, 4, 1):
+    for i in np.arange(1, 2, 1):
         pdrPlotData = []
+        pdrPlotData2 = []
         for j in np.arange(0, 50, 1):
-            pdrPlotData.append(EEData(j, i)*100)
+            dat = EEData(j, i)*100
+            pdrPlotData.append(dat)
+            pdrPlotData2.append(dat/j)
 
-        fig.add_trace(go.Scatter(x=np.arange(0, 50, 1), y=pdrPlotData, name="L:G = " + str(i)))
+
+        fig.add_trace(go.Scatter(x=np.arange(0, 50, 1), y=pdrPlotData, name="EE L:G = " + str(i)))
+        fig.add_trace(go.Scatter(x=np.arange(0, 50, 1), y=pdrPlotData2, name="DL L:G = " + str(i)))
 
     fig.update_layout(
-        title="Effect of PLGA:Drug ratio and lactide:glycolide ratio on entrapment efficiency",
+        title="Effect of PLGA:Drug ratio and lactide:glycolide ratio on entrapment efficiency and drug loading",
         xaxis_title="PLGA:Drug ratio",
         yaxis_title="Entrapment Efficiency (%)",
     )
