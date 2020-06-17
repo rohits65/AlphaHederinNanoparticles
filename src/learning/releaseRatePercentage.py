@@ -6,10 +6,10 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from joblib import dump
 # Importing the dataset
-data = pd.read_csv("../../data/DrugData - main.csv").dropna(subset=['xlogP', 'EE', 'TPSA', 'MW', 'LToG', 'RRPercent'])
+data = pd.read_csv("../../data/DrugData - main.csv").dropna(subset=['xlogP', 'EE', 'TPSA', 'MW', 'LToG', 'RRPercent', 'MPS'])
 
 # Get the columns associated with x, y
-x_values = data[['xlogP', 'EE', 'TPSA', 'MW', 'LToG']].to_numpy().reshape(-1, 5)#[0:40]  # Change last num_params
+x_values = data[['xlogP', 'EE', 'TPSA', 'MW', 'LToG', 'CX', 'MPS']].to_numpy().reshape(-1, 7)#[0:40]  # Change last num_params
 y_values = np.ravel(data[['RRPercent']].to_numpy())#[0:40] # .reshape(-1, 1)
 y_values = [val/100 for val in y_values]
 
@@ -29,28 +29,28 @@ X_test = sc.transform(X_test)
 model = Sequential()
 
 # Adding the input layer and the first hidden layer
-model.add(Dense(32, activation = 'relu', input_dim = 5))
+model.add(Dense(128, activation = 'relu', input_dim = 7))
 
 # Adding the second hidden layer
-model.add(Dense(units = 32, activation = 'relu'))
+model.add(Dense(units = 128, activation = 'relu'))
 
 # Adding the third hidden layer
-model.add(Dense(units = 32, activation = 'relu'))
+model.add(Dense(units = 64, activation = 'relu'))
 
 # Adding the output layer
 
-model.add(Dense(units = 1))
+model.add(Dense(units = 1, activation='sigmoid'))
 
 #model.add(Dense(1))
 # Compiling the ANN
-model.compile(optimizer = 'adam', loss = 'mean_squared_error')
+model.compile(optimizer = 'adam', loss = 'mean_squared_logarithmic_error')
 
 # Fitting the ANN to the Training set
-model.fit(X_train, y_train, batch_size = 100, epochs = 300, validation_data=(X_test, y_test))
-model.save("../savedStates/releaseRate_model.savedstate")
+model.fit(X_train, y_train, batch_size = 50, epochs = 500, validation_data=(X_test, y_test))
+model.save("../savedStates/releaseRatePercentage_model.savedstate")
 
-model = load_model("../savedStates/releaseRate_model.savedstate")
-dump(sc, "../savedStates/releaseRate_scaler.savedstate")
+model = load_model("../savedStates/releaseRatePercentage_model.savedstate")
+dump(sc, "../savedStates/releaseRatePercentage_scaler.savedstate")
 
 y_pred = model.predict(X_test)
 

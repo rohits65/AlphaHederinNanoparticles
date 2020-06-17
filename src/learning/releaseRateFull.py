@@ -46,7 +46,7 @@ model.add(Dense(units = 2))
 model.compile(optimizer = 'adam', loss = 'mean_squared_error')
 
 # Fitting the ANN to the Training set
-model.fit(X_train, y_train, batch_size = 200, epochs = 650, validation_data=(X_test, y_test))
+model.fit(X_train, y_train, batch_size = 50, epochs = 420, validation_data=(X_test, y_test))
 model.save("../savedStates/releaseRateFull_model.savedstate")
 
 model = load_model("../savedStates/releaseRateFull_model.savedstate")
@@ -54,11 +54,11 @@ dump(sc, "../savedStates/releaseRateFull_scaler.savedstate")
 
 y_pred = model.predict(X_test)
 
-y_pred_graph = [val[0]/val[1] for val in y_pred]
-y_test_graph = [val[0]/val[1] for val in y_test]
-
-plt.plot(y_test_graph, color = 'red', label = 'Real data')
-plt.plot(y_pred_graph, color = 'blue', label = 'Predicted data')
+# y_pred_graph = [val[0]/val[1] for val in y_pred]
+# y_test_graph = [val[0]/val[1] for val in y_test]
+#
+plt.plot(y_test, color = 'red', label = 'Real data')
+plt.plot(y_pred, color = 'blue', label = 'Predicted data')
 plt.title('Prediction')
 plt.legend()
 plt.show()

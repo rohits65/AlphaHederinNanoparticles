@@ -9,9 +9,9 @@ from joblib import dump
 data = pd.read_csv("../../data/DrugData - main.csv").dropna(subset=['xlogP', 'EE', 'TPSA', 'MW', 'CX', 'LToG', 'MPS', 'RRHours'])
 
 # Get the columns associated with x, y
-x_values = data[['xlogP', 'EE', 'TPSA', 'MW', 'CX', 'LToG', 'MPS']].to_numpy().reshape(-1, 7)[0:40]  # Change last num_params
-y_values = np.ravel(data[['RRHours']].to_numpy())[0:40] # .reshape(-1, 1)
-y_values = [val/100 for val in y_values]
+x_values = data[['xlogP', 'EE', 'TPSA', 'MW', 'CX', 'LToG', 'MPS']].to_numpy().reshape(-1, 7) # Change last num_params
+y_values = np.ravel(data[['RRHours']].to_numpy()) # .reshape(-1, 1)
+# y_values = [val/100 for val in y_values]
 
 X = x_values#dataset[:, :-1]
 y = y_values#dataset[:, -1]
@@ -46,7 +46,7 @@ model.add(Dense(units = 1))
 model.compile(optimizer = 'adam', loss = 'mean_squared_error')
 
 # Fitting the ANN to the Training set
-model.fit(X_train, y_train, batch_size = 32, epochs = 150)
+model.fit(X_train, y_train, batch_size = 50, epochs = 150, validation_data=(X_test, y_test))
 model.save("../savedStates/releaseRateHours_model.savedstate")
 
 model = load_model("../savedStates/releaseRateHours_model.savedstate")

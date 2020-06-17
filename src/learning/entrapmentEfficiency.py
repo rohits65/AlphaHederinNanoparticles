@@ -39,14 +39,14 @@ model.add(Dense(units = 32, activation = 'relu'))
 
 # Adding the output layer
 
-model.add(Dense(units = 1))
+model.add(Dense(units = 1, activation='sigmoid'))
 
 #model.add(Dense(1))
 # Compiling the ANN
 model.compile(optimizer = 'adam', loss = 'mean_squared_error')
 
 # Fitting the ANN to the Training set
-model.fit(X_train, y_train, batch_size = 10, epochs = 200)
+model.fit(X_train, y_train, batch_size = 50, epochs = 300, validation_data=(X_test, y_test))
 model.save("../savedStates/entrapmentEfficiency_model.savedstate")
 
 model = load_model("../savedStates/entrapmentEfficiency_model.savedstate")
@@ -54,8 +54,8 @@ dump(sc, "../savedStates/entrapmentEfficiency_scaler.savedstate")
 
 y_pred = model.predict(X_test)
 
-plt.plot(y_test, color = 'red', label = 'Real data')
-plt.plot(y_pred, color = 'blue', label = 'Predicted data')
+plt.plot(y_test, color = 'red', label = 'Predicted data')
+plt.plot(y_pred, color = 'blue', label = 'Real data')
 plt.title('Prediction')
 plt.legend()
 plt.show()
