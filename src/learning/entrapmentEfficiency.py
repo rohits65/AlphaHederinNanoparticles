@@ -6,11 +6,11 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from joblib import dump
 # Importing the dataset
-data = pd.read_csv("../../data/DrugData - main.csv").dropna(subset=['EE', 'LToG', 'PLGAtodrug'])
+data = pd.read_csv("../../data/DrugData - main.csv").dropna(subset=['EE', 'LToG', 'PLGAtodrug', 'MW', 'CX', 'LToG', 'TPSA'])
 
 # Get the columns associated with x, y
-x_values = data[['MW', 'CX', 'LToG', 'TPSA', 'PLGAtodrug', 'xlogP']].to_numpy().reshape(-1, 6)[0:40]  # Change last num_params
-y_values = np.ravel(data[['EE']].to_numpy())[0:40] # .reshape(-1, 1)
+x_values = data[['MW', 'CX', 'LToG', 'TPSA', 'PLGAtodrug', 'xlogP']].to_numpy().reshape(-1, 6)#[0:40]  # Change last num_params
+y_values = np.ravel(data[['EE']].to_numpy())#[0:40] # .reshape(-1, 1)
 y_values = [val/100 for val in y_values]
 
 X = x_values#dataset[:, :-1]
@@ -46,7 +46,7 @@ model.add(Dense(units = 1, activation='sigmoid'))
 model.compile(optimizer = 'adam', loss = 'mean_squared_error')
 
 # Fitting the ANN to the Training set
-model.fit(X_train, y_train, batch_size = 50, epochs = 300, validation_data=(X_test, y_test))
+model.fit(X_train, y_train, batch_size = 80, epochs = 700, validation_data=(X_test, y_test))
 model.save("../savedStates/entrapmentEfficiency_model.savedstate")
 
 model = load_model("../savedStates/entrapmentEfficiency_model.savedstate")
@@ -54,8 +54,8 @@ dump(sc, "../savedStates/entrapmentEfficiency_scaler.savedstate")
 
 y_pred = model.predict(X_test)
 
-plt.plot(y_test, color = 'red', label = 'Predicted data')
 plt.plot(y_pred, color = 'blue', label = 'Real data')
+plt.plot(y_test, color = 'red', label = 'Predicted data')
 plt.title('Prediction')
 plt.legend()
 plt.show()

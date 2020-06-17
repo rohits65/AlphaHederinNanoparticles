@@ -17,7 +17,7 @@ X = x_values#dataset[:, :-1]
 y = y_values#dataset[:, -1]
 
 # Splitting the dataset into the Training set and Test set
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 0)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.1, random_state = 0)
 
 # Feature Scaling
 from sklearn.preprocessing import StandardScaler
@@ -43,10 +43,10 @@ model.add(Dense(units = 1))
 
 #model.add(Dense(1))
 # Compiling the ANN
-model.compile(optimizer = 'adam', loss = 'mean_squared_error')
+model.compile(optimizer = 'adadelta', loss = 'mean_squared_error')
 
 # Fitting the ANN to the Training set
-model.fit(X_train, y_train, batch_size = 50, epochs = 600, validation_data=(X_test, y_test))
+model.fit(X_train, y_train, batch_size = 80, epochs = 750, validation_data=(X_test, y_test))
 model.save("../savedStates/meanParticleSize_model.savedstate")
 
 model = load_model("../savedStates/meanParticleSize_model.savedstate")
@@ -54,8 +54,8 @@ dump(sc, "../savedStates/meanParticleSize_scaler.savedstate")
 
 y_pred = model.predict(X_test)
 
-plt.plot(y_test, color = 'red', label = 'Real data')
-plt.plot(y_pred, color = 'blue', label = 'Predicted data')
-plt.title('Prediction')
+plt.plot(y_test, color = 'blue', label = 'Real data')
+plt.plot(y_pred, color = 'red', label = 'Predicted data')
+plt.title('MPS Predictions')
 plt.legend()
 plt.show()

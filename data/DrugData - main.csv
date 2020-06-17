@@ -1,51 +1,89 @@
-name,solventType,solventProportion,PLGAtodrug,stirTime,MPS,MW,xlogP,TPSA,CX,ZP,LToG,BE,EE,RRHours,RRPercent,slope,source
-docetaxel,,,10,,269.4,807.9,1.6,224,1660,,1,-9.5,97.4,37,26,0.7027027027,doi:10.2147/ijn.s24547
-paclitaxel,acetone,0.25,10,,123,853.9,2.5,221,1790,,1,-9,90,36,35,0.9722222222,doi:10.1016/j.colsurfb.2014.10.007
-triamcinolone acetonide,,,10,,195,434.5,2.5,93.1,925,,1,-8.6,31.67,11,53,4.818181818,"Sabzevari, A., Adibkia, K., Hashemi, H., Hedayatfar, A., Mohsenzadeh, N., Atyabi, F., … Dinarvand, R. (2013). Polymeric triamcinolone acetonide nanoparticles as a new alternative in the treatment of uveitis: In vitro and in vivo studies. European Journal of Pharmaceutics and Biopharmaceutics, 84(1), 63–71. doi:10.1016/j.ejpb.2012.12.010 "
-indomethacin,acetone,0.067,30,10,167.6,357.8,4.3,68.5,506,,3,-7.8,93.9,,,,10.1081/ddc-100102197
-cyclosporin A,acetone,0.067,30,10,169.2,1202.6,7.5,279,2330,,3,-8.9,83.7,,,,10.1081/ddc-100102197
-ketoprofen,acetone,0.067,30,10,167.4,254.28,3.1,54.4,331,,3,-8.2,46.2,2,38,19,10.1081/ddc-100102197
-cytarabine,methanol,0.024,10,20,135,243.22,-2.1,129,383,,1,-6.9,20,2,51,25.5,https://drive.google.com/file/d/1Z92QR4QNGbBfgkGCbkBdYh0xuPbQD-OD/view?usp=sharing
-vancomycin,acetone,0.067,30,10,186.9,1449.2,-2.6,531,2960,,3,-7.8,12.1,,,,10.1081/ddc-100102197
-phenobarbital,acetone,0.067,30,10,157.4,232.23,1.5,75.3,339,,3,-7.2,9.4,,,,10.1081/ddc-100102197
-valproic acid,acetone,0.067,30,10,166.2,144.21,2.8,37.3,93,,3,-5.4,5.6,,,,10.1081/ddc-100102197
-rifampicin,acetonitrile,,,3600,260.3,822.9,4.9,220,1620,,1,-9.429710056,76.25,8,68,8.5,doi:10.1007/s11095-018-2543-x 
- dexamethasone,,,6,,204,392.5,1.9,94.8,805,,1,-8.306103129,77.3,7,88,12.57142857,"doi: 10.1089/jop.2009.0074."
-hydrocortisone acetate,,,6,,226,404.5,2.2,101,786,,1,-8.382893644,91.3,6,67,11.16666667,"doi: 10.1089/jop.2009.0074."
-prednisolone acetate,,,6,,183,402.5,2.4,101,827,,1,-8.330022134,92.3,6,66,11,"doi: 10.1089/jop.2009.0074."
-dexamethasone,,,6,,203,392.5,1.9,94.8,805,,2,-8.290374182,76.6,50,45,0.9,"doi: 10.1089/jop.2009.0074."
-hydrocortisone acetate,,,6,,214,404.5,2.2,101,786,,2,-8.344892244,92.3,5,62,12.4,"doi: 10.1089/jop.2009.0074."
+name,solventType,solventProportion,PLGAtodrug,stirTime,MPS,MW,xlogP,TPSA,CX,ZP,LToG,BE,EE,RRHours,RRPercent,slope,source,directSource,,
+alpha hederin,,,,,,751,3.6,196,1440,,,,,,,,,,,
+docetaxel,,,10,,269.4,807.9,1.6,224,1660,,1,-9.5,97.4,37,26,0.7027027027,doi:10.2147/ijn.s24547,https://drive.google.com/file/d/1VP330MZEX7tL9mATnarswwqbp5YNl55H/view,,
+paclitaxel,acetone,0.25,10,,123,853.9,2.5,221,1790,,1,-9,90,36,35,0.9722222222,doi:10.1016/j.colsurfb.2014.10.007,,,
+triamcinolone acetonide,,,10,,195,434.5,2.5,93.1,925,,1,-8.6,31.67,11,53,4.818181818,"Sabzevari, A., Adibkia, K., Hashemi, H., Hedayatfar, A., Mohsenzadeh, N., Atyabi, F., … Dinarvand, R. (2013). Polymeric triamcinolone acetonide nanoparticles as a new alternative in the treatment of uveitis: In vitro and in vivo studies. European Journal of Pharmaceutics and Biopharmaceutics, 84(1), 63–71. doi:10.1016/j.ejpb.2012.12.010 ",,,
+indomethacin,acetone,0.067,30,10,167.6,357.8,4.3,68.5,506,,3,-7.8,93.9,,,,10.1081/ddc-100102197,,,
+cyclosporin A,acetone,0.067,30,10,169.2,1202.6,7.5,279,2330,,3,-8.9,83.7,,,,10.1081/ddc-100102197,,,
+ketoprofen,acetone,0.067,30,10,167.4,254.28,3.1,54.4,331,,3,-8.2,46.2,2,38,19,10.1081/ddc-100102197,,,
+cytarabine,methanol,0.024,10,20,135,243.22,-2.1,129,383,,1,-6.9,20,2,51,25.5,https://drive.google.com/file/d/1Z92QR4QNGbBfgkGCbkBdYh0xuPbQD-OD/view?usp=sharing,,,
+vancomycin,acetone,0.067,30,10,186.9,1449.2,-2.6,531,2960,,3,-7.8,12.1,,,,10.1081/ddc-100102197,,,
+phenobarbital,acetone,0.067,30,10,157.4,232.23,1.5,75.3,339,,3,-7.2,9.4,,,,10.1081/ddc-100102197,,,
+valproic acid,acetone,0.067,30,10,166.2,144.21,2.8,37.3,93,,3,-5.4,5.6,,,,10.1081/ddc-100102197,,,
+rifampicin,acetonitrile,,,3600,260.3,822.9,4.9,220,1620,,1,-9.429710056,76.25,8,68,8.5,doi:10.1007/s11095-018-2543-x ,https://link.springer.com/article/10.1007/s11095-018-2543-x,,
+ dexamethasone,,,6,,204,392.5,1.9,94.8,805,,1,-8.306103129,77.3,7,88,12.57142857,"doi: 10.1089/jop.2009.0074.",https://europepmc.org/backend/ptpmcrender.fcgi?accid=PMC3096543&blobtype=pdf,,
+hydrocortisone acetate,,,6,,226,404.5,2.2,101,786,,1,-8.382893644,91.3,6,67,11.16666667,"doi: 10.1089/jop.2009.0074.",https://europepmc.org/backend/ptpmcrender.fcgi?accid=PMC3096543&blobtype=pdf,,
+prednisolone acetate,,,6,,183,402.5,2.4,101,827,,1,-8.330022134,92.3,6,66,11,"doi: 10.1089/jop.2009.0074.",https://europepmc.org/backend/ptpmcrender.fcgi?accid=PMC3096543&blobtype=pdf,,
+dexamethasone,,,6,,203,392.5,1.9,94.8,805,,2,-8.290374182,76.6,50,45,0.9,"doi: 10.1089/jop.2009.0074.",https://europepmc.org/backend/ptpmcrender.fcgi?accid=PMC3096543&blobtype=pdf,,
+hydrocortisone acetate,,,6,,214,404.5,2.2,101,786,,2,-8.344892244,92.3,5,62,12.4,"doi: 10.1089/jop.2009.0074.",https://europepmc.org/backend/ptpmcrender.fcgi?accid=PMC3096543&blobtype=pdf,,
 prednisolone acetate,,,6,,193,402.5,2.4,101,827,,2,-8.336565872,94.3,6,58,9.666666667,"doi: 10.1089/jop.2009.0074.
-"
-Oleanolic acid,acetone,0.055,18,,213.7,456.7,7.5,57.5,885,,3,-8.634128108,76.75,28,73,2.607142857,10.1016/j.nano.2015.01.004
-ursolic acid,acetone,0.055,18,,214.9,456.7,7.3,57.5,874,,3,-8.619571798,71.63,28,73,2.607142857,10.1016/j.nano.2015.01.004
-Eluxadoline ,,,12,,273.76,569.6,0.9,165,917,,3,-8.846854292,56.29,5,75,15,10.3389/fphar.2017.00844.
-Minocycline,dimethyl sulfoxide,0.04,2.5,,85,457.5,-0.6,165,971,,1,-7.935067326,0.81,,,,10.2147/IJN.S27709
-Minocycline,,,2.3,,193,457.5,-0.6,165,971,,1,-8.479162754,3.85,8,18,2.25,10.2147/IJN.S27709
-hydrochlorothiazide,,,1,,570.9,297.7,-0.1,135,494,,1,-8.694424261,29.34,175,26,0.1485714286,10.1371/journal.pone.0128208
-candesartan,,,1,,898.5,440.5,4.1,119,660,,1,-9.429710056,33.5,168,100,0.5952380952,10.1371/journal.pone.0128208
-amlodipine besylate,,,1,,643.3,408.9,3,99.9,647,,1,-9.175127641,42,120,100,0.8333333333,10.1371/journal.pone.0128208
-Doxorubicin,Methanol,0.03,47,45,249,543.5,1.3,206,977,,1,-8.933780438,95.4,,,,10.2217/17435889.2.2.219
-Doxorubicin,Methanol,0.03,26,45,173,543.5,1.3,206,977,,1,-8.697001905,72.7,,,,10.2217/17435889.2.2.219
-Doxorubicin,Methanol,0.03,19,45,239,543.5,1.3,206,977,,1,-8.913602874,65.4,,,,10.2217/17435889.2.2.219
-Doxorubicin,Methanol,0.03,34,45,,543.5,1.3,206,977,,1,,,50,88,1.76,10.2217/17435889.2.2.219
-Doxorubicin,Methanol,0.03,20,45,,543.5,1.3,206,977,,1,,,70,81,1.157142857,10.2217/17435889.2.2.219
-Artemisinin,acetone,,3,240,255,282.33,2.8,54,452,,1,,68.21,43,82,1.906976744,10.1016/j.jcis.2014.06.035
-N-acetyl-cysteine,acetonitrile,,10,120,81.8,163.2,0.4,67.4,148,,1,,42,40,89,2.225,10.1002/jcb.26070
-Methotrexate,,,,,72.17,454.4,-1.8,211,704,,1,,87,28,63,2.25,10.1080/21691401.2018.1468768
-trans-Cinnamaldehyde,,,16,,173.8,132.16,1.9,17.1,121,,2,,92,5,80,16,10.1111/j.1750-3841.2010.01985.x. 
-Eugenol,,,16,,179.3,164.2,2,29.5,145,,2,,98,2,43,21.5,10.1111/j.1750-3841.2010.01985.x. 
-Cyclosporine,,,,,41.6,1202.6,7.5,279,2330,,1,,93.01,,36.33,,10.1016/j.ijpharm.2009.12.040.
-Budesonide,,,10,,200,430.5,2.5,93.1,862,,1,,85,13,58,4.461538462,10.1007/s11095-015-1852-6
-Hydrocortisone Butyrate,(PVA) EMULSION,,1.4,,164.3,432.5,3.2,101,817,,3,,90.6,24,66.1,2.754166667,10.1208/s12249-015-0354-5
-dexamethasone,,,,,,392.5,1.9,94.8,805,,1,,,75,62,0.8266666667,10.1023/a:1014006800514
-dexamethasone,,,,,,392.5,1.9,94.8,805,,3,,,75,49,0.6533333333,10.1023/a:1014006800514
-azithromycin,acetone,,3,,212,749,4,180,1150,,1,,78.5,4,67,16.75,10.1016/j.colsurfb.2010.05.027
-azithromycin,acetone,,2,,230,749,4,180,1150,,1,,66.8,4,78,19.5,10.1016/j.colsurfb.2010.05.027
-azithromycin,acetone,,1,,252,749,4,180,1150,,1,,50.5,4,83,20.75,10.1016/j.colsurfb.2010.05.027
-rutin,,,32,,179,610.5,-1.3,266,1020,,1,,27,0.25,40,160,10.2174/2211738507666191019141049
-furosemid,acetone,,1,,182.8,330.74,2,131,481,,1,,88.29,5,40,8,10.1016/j.colsurfb.2012.01.027
-saquinavir,,,15,,250,670.8,4.2,167,1140,,1,,70,144,39,0.2708333333,10.1016/j.colsurfb.2011.06.026.
-Paclitaxel,Dichloro Methane,,,,317.5,853.9,2.5,221,1790,,,,85.42,26,53,2.038461538,10.1371/journal.pone.0206109
-Erlotinib,,,3,,210,393.4,3.3,74.7,525,,1,,21.9,20,15,0.75,10.1016/j.ijbiomac.2018.10.181
-naphthalen-1-yl-(4-pentyloxynaphthalen-1-yl)methanone,acetone,,8,,,368.5,7.5,26.3,501,,,,70,192,32,0.1666666667,
+",https://europepmc.org/backend/ptpmcrender.fcgi?accid=PMC3096543&blobtype=pdf,,
+Oleanolic acid,acetone,0.055,18,,213.7,456.7,7.5,57.5,885,,3,-8.634128108,76.75,28,73,2.607142857,10.1016/j.nano.2015.01.004,,,
+ursolic acid,acetone,0.055,18,,214.9,456.7,7.3,57.5,874,,3,-8.619571798,71.63,28,73,2.607142857,10.1016/j.nano.2015.01.004,,,
+Eluxadoline ,,,12,,273.76,569.6,0.9,165,917,,3,-8.846854292,56.29,5,75,15,10.3389/fphar.2017.00844.,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5702012/,,
+Minocycline,dimethyl sulfoxide,0.04,2.5,,85,457.5,-0.6,165,971,,1,-7.935067326,0.81,,,,10.2147/IJN.S27709,https://www.dovepress.com/front_end/cr_data/cache/pdf/download_1592239730_5ee7a67276193/IJN-27709-improved-drug-loading-and-antibacterial-activity-of-minocycl_010912.pdf,,
+Minocycline,,,2.3,,193,457.5,-0.6,165,971,,1,-8.479162754,3.85,8,18,2.25,10.2147/IJN.S27709,https://www.dovepress.com/front_end/cr_data/cache/pdf/download_1592239730_5ee7a67276193/IJN-27709-improved-drug-loading-and-antibacterial-activity-of-minocycl_010912.pdf,,
+hydrochlorothiazide,,,1,,570.9,297.7,-0.1,135,494,,1,-8.694424261,29.34,175,26,0.1485714286,10.1371/journal.pone.0128208,https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0128208,,
+candesartan,,,1,,898.5,440.5,4.1,119,660,,1,-9.429710056,33.5,168,100,0.5952380952,10.1371/journal.pone.0128208,https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0128208,,
+amlodipine besylate,,,1,,643.3,408.9,3,99.9,647,,1,-9.175127641,42,120,100,0.8333333333,10.1371/journal.pone.0128208,https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0128208,,
+Doxorubicin,Methanol,0.03,47,45,249,543.5,1.3,206,977,,1,-8.933780438,95.4,,,,10.2217/17435889.2.2.219,https://www.futuremedicine.com/doi/full/10.2217/17435889.2.2.219?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%20%200pubmed,,
+Doxorubicin,Methanol,0.03,26,45,173,543.5,1.3,206,977,,1,-8.697001905,72.7,,,,10.2217/17435889.2.2.219,https://www.futuremedicine.com/doi/full/10.2217/17435889.2.2.219?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%20%200pubmed,,
+Doxorubicin,Methanol,0.03,19,45,239,543.5,1.3,206,977,,1,-8.913602874,65.4,,,,10.2217/17435889.2.2.219,https://www.futuremedicine.com/doi/full/10.2217/17435889.2.2.219?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%20%200pubmed,,
+Doxorubicin,Methanol,0.03,34,45,,543.5,1.3,206,977,,1,,,50,88,1.76,10.2217/17435889.2.2.219,https://www.futuremedicine.com/doi/full/10.2217/17435889.2.2.219?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%20%200pubmed,,
+Doxorubicin,Methanol,0.03,20,45,,543.5,1.3,206,977,,1,,,70,81,1.157142857,10.2217/17435889.2.2.219,https://www.futuremedicine.com/doi/full/10.2217/17435889.2.2.219?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%20%200pubmed,,
+Artemisinin,acetone,,3,240,255,282.33,2.8,54,452,,1,,68.21,43,82,1.906976744,10.1016/j.jcis.2014.06.035,https://pubmed.ncbi.nlm.nih.gov/25086720/,,
+N-acetyl-cysteine,acetonitrile,,10,120,81.8,163.2,0.4,67.4,148,,1,,42,40,89,2.225,10.1002/jcb.26070,,,
+Methotrexate,,,,,72.17,454.4,-1.8,211,704,,1,,87,28,63,2.25,10.1080/21691401.2018.1468768,https://www.tandfonline.com/doi/pdf/10.1080/21691401.2018.1468768,,
+trans-Cinnamaldehyde,,,16,,173.8,132.16,1.9,17.1,121,,2,,92,5,80,16,10.1111/j.1750-3841.2010.01985.x. ,https://drive.google.com/file/d/1OCeGkN-v67fkpkGsLDG2AcOLP590Ibe5/view,,
+Eugenol,,,16,,179.3,164.2,2,29.5,145,,2,,98,2,43,21.5,10.1111/j.1750-3841.2010.01985.x. ,https://drive.google.com/file/d/1OCeGkN-v67fkpkGsLDG2AcOLP590Ibe5/view,,
+Cyclosporine,,,, ,41.6,1202.6,7.5,279,2330,,1,,93.01,,36.33,,10.1016/j.ijpharm.2009.12.040.,https://europepmc.org/backend/ptpmcrender.fcgi?accid=PMC3086023&blobtype=pdf,,
+Budesonide,,,10,,200,430.5,2.5,93.1,862,,1,,85,13,58,4.461538462,10.1007/s11095-015-1852-6,https://www.researchgate.net/publication/288837724_Budesonide_Loaded_PLGA_Nanoparticles_for_Targeting_the_Inflamed_Intestinal_Mucosa-Pharmaceutical_Characterization_and_Fluorescence_Imaging,,
+Hydrocortisone Butyrate,,,1.4,,164.3,432.5,3.2,101,817,,3,,90.6,24,66.1,2.754166667,10.1208/s12249-015-0354-5,https://link.springer.com/content/pdf/10.1208%2Fs12249-015-0354-5.pdf,,
+dexamethasone,,,,,,392.5,1.9,94.8,805,,1,,,75,62,0.8266666667,10.1023/a:1014006800514,,,
+dexamethasone,,,,,,392.5,1.9,94.8,805,,3,,,75,49,0.6533333333,10.1023/a:1014006800514,,,
+azithromycin,acetone,,3,,212,749,4,180,1150,,1,,78.5,4,67,16.75,10.1016/j.colsurfb.2010.05.027,https://pubmed.ncbi.nlm.nih.gov/20558048/,,
+azithromycin,acetone,,2,,230,749,4,180,1150,,1,,66.8,4,78,19.5,10.1016/j.colsurfb.2010.05.027,https://pubmed.ncbi.nlm.nih.gov/20558048/,,
+azithromycin,acetone,,1,,252,749,4,180,1150,,1,,50.5,4,83,20.75,10.1016/j.colsurfb.2010.05.027,https://pubmed.ncbi.nlm.nih.gov/20558048/,,
+rutin,,,32,,179,610.5,-1.3,266,1020,,1,,27,0.25,40,160,10.2174/2211738507666191019141049,https://pubmed.ncbi.nlm.nih.gov/31648653/,,
+furosemid,acetone,,1,,182.8,330.74,2,131,481,,1,,88.29,5,40,8,10.1016/j.colsurfb.2012.01.027,,,
+saquinavir,,,15,,250,670.8,4.2,167,1140,,1,,70,144,39,0.2708333333,10.1016/j.colsurfb.2011.06.026.,,,
+Paclitaxel,Dichloro Methane,,,,317.5,853.9,2.5,221,1790,,,,85.42,26,53,2.038461538,10.1371/journal.pone.0206109,https://pureadmin.qub.ac.uk/ws/portalfiles/portal/161785201/AntiEGFR.pdf,,
+Erlotinib,,,3,,210,393.4,3.3,74.7,525,,1,,21.9,20,15,0.75,10.1016/j.ijbiomac.2018.10.181,https://pubmed.ncbi.nlm.nih.gov/30401652/,,
+naphthalen-1-yl-(4-pentyloxynaphthalen-1-yl)methanone,acetone,,8,,,368.5,7.5,26.3,501,,,,70,192,32,0.1666666667,,,,
+cyclosporin,,,10,,312,1202.6,7.5,279,2330,,1,,94.4,216,19,,10.1016/s0168-3659(02)00239-0,https://www.researchgate.net/publication/11003746_Investigation_of_the_factors_influencing_the_release_rates_of_cyclosporin_A-loaded_micro-_and_nanoparticles_prepared_by_high-pressure_homogenizer,0.8867964,0.340432
+cyclosporin,,,10,,330,1202.6,7.5,279,2330,,6,,71.2,216,22,,10.1016/s0168-3659(02)00239-0,https://www.researchgate.net/publication/11003746_Investigation_of_the_factors_influencing_the_release_rates_of_cyclosporin_A-loaded_micro-_and_nanoparticles_prepared_by_high-pressure_homogenizer,0.8891877,-0.028982565
+curcumin,,,9,,158,368.4,3.2,93.1,507,,1,,91.96,24,52,,10.1021/jf202135j,https://pubs.acs.org/doi/full/10.1021/jf202135j,0.8158354,0.57463604
+Vorapaxar,acetone,,20,,296.7,492.6,5.3,77.5,821,,1,,83,,,,https://drive.google.com/file/d/1Qjm420KLRaZr1rVoqcaU1jNUSn5RlDI8/view?usp=sharing,,,
+Thymoquinone,dichloromethane,,7,,132.7,164.2,2,34.1,293,,3,,29.8,2,68,,https://drive.google.com/file/d/18PqsNF_uWTMKeNvxr87r_y0FW5FNumay/view?usp=sharing,,,
+Uncaria tomentosa,acetone/ethyl acetate,0.099,41,,107,,,,,,1,,64.6,91,59,,https://drive.google.com/file/d/1pd2QeBYfG-aNzFEzX-XR-PUNYSlo02wd/view?usp=sharing,,,
+risedronate sodium,,,,,131.37,305.09,151,375,,,1,,47.16,1,15,,10.3109/10717544.2014.1002947,https://www.tandfonline.com/doi/pdf/10.3109/10717544.2014.1002947,,
+Nelfinavir,acetonitrile,0.05,1,,192.8,567.8,5.7,127,830,,1,,20,,,,10.1016/j.jsps.2015.02.021,ncbi.nlm.nih.gov/pmc/articles/PMC4669422/,,
+Nelfinavir,acetonitrile,0.05,2,,140.3,567.8,5.7,127,830,,1,,27.5,,,,10.1016/j.jsps.2015.02.021,ncbi.nlm.nih.gov/pmc/articles/PMC4669422/,,
+Nelfinavir,acetonitrile,0.05,3,,167,567.8,5.7,127,830,,1,,46,,,,10.1016/j.jsps.2015.02.021,ncbi.nlm.nih.gov/pmc/articles/PMC4669422/,,
+Nelfinavir,acetonitrile,0.05,4,,185.3,567.8,5.7,127,830,,1,,72,5,30,,10.1016/j.jsps.2015.02.021,ncbi.nlm.nih.gov/pmc/articles/PMC4669422/,,
+Nelfinavir,acetonitrile,0.05,5,,203.2,567.8,5.7,127,830,,1,,58,,,,10.1016/j.jsps.2015.02.021,ncbi.nlm.nih.gov/pmc/articles/PMC4669422/,,
+Artesunate ,,,,,170,384.4,2.5,101,623,,1,,83.4,7,60,,10.1007/s12272-014-0424-3.,https://www.researchgate.net/publication/263474974_Enhancing_the_in_vitro_anti-cancer_efficacy_of_artesunate_by_loading_into_poly-DL-lactide-co-glycolide_PLGA_nanoparticles,,
+Paclitaxel,,,10,,67.56,853.9,2.5,221,1790,,3,,84.24,504,60,,10.1080/10717544.2017.1422296.,https://www.tandfonline.com/doi/pdf/10.1080/10717544.2017.1422296,,
+Paclitaxel,,,10,,51.53,853.9,2.5,221,1790,,3,,93.25,288,85,,10.1080/10717544.2017.1422296.,https://www.tandfonline.com/doi/pdf/10.1080/10717544.2017.1422296,,
+Budesonide,,,100,,200,430.5,2.5,93.1,862,,3,,85,0.5,60,,,https://www.researchgate.net/publication/288837724_Budesonide_Loaded_PLGA_Nanoparticles_for_Targeting_the_Inflamed_Intestinal_Mucosa-Pharmaceutical_Characterization_and_Fluorescence_Imaging,,
+Indomethacin,,,,,260,357.8,4.3,68.5,506,,1,,70,,,,,https://drive.google.com/file/d/1PlL3iY7oab3XXhBfCEQeemWRZKGg69hu/view?usp=sharing,,
+Loteprednol Etabonate,,,,,167.6,466.9,3.9,99.1,882,,1,,96.31,,,,10.2174/1567201813666160801125235.,,,
+5-Fluorouracil,,,5,,241.1,130.08,-0.9,58.2,199,,1,,31.96,2,30,,,https://www.dovepress.com/front_end/cr_data/cache/pdf/download_1592346387_5ee94713c1f2c/ijn-223368-physical-pegylation-enhances-the-cytotoxicity-of-5-flurourac.pdf,,
+curcumin,,,10,,170,368.4,3.2,93.1,507,,1,,68.6,29,23,,,https://drive.google.com/file/d/1Aj2WS7JyGkKjhRbflBw5EEnTy-PUHmPI/view?usp=sharing,,
+gemcitabine,,,10,,184,263.2,-1.5,108,426,,1,,47.5,28,44,,,https://drive.google.com/file/d/1Aj2WS7JyGkKjhRbflBw5EEnTy-PUHmPI/view?usp=sharing,,
+ciprofloxacin,,,200,,234.68,331.34,-1.1,72.9,571,,1,,61.72,6,26,,,https://drive.google.com/file/d/1nZyY5rV56FPTvvCCubBodVhktsjiOhO2/view?usp=sharing,,
+celecoxib,ethyl acetate.,0.06,10,,83,381.4,3.4,86.4,577,,1,,94,,,,,https://drive.google.com/file/d/1xxBiskJfCGNRpPTTCwtKICsTKWSF-FSR/view?usp=sharing,,
+procaine hydrochloride,acetonitrile,0.1,25,,81.8,272.77,1.9,55.6,222,,1,,44.1,2,93,,,https://drive.google.com/file/d/1Cy-HAvCZz6Zl6RIgxIjSNDFnRFQ0Y3AL/view?usp=sharing,,
+cyclosporine,ethyl acetate.,0.02,5,,182.2,1202.6,7.5,279,2330,,1,,87.6,1.3,2,,,https://drive.google.com/file/d/1JO1i__fflr23vKYNJwRMxo6iTvDF93NS/view?usp=sharing,,
+Amphotericin B,,,10,,400.2,924.1,0,320,1670,,1,,23.3,1,15,,,https://www.researchgate.net/profile/Matthew_Wright7/publication/268527211_Stealth_Amphotericin_B_Nanoparticles_For_Oral_Drug_Delivery_In_Vitro_Optimization/links/54bcd5ad0cf24e50e9409854.pdf?origin=publication_list,,
+heparin,,,,,300,1134.9,-10.8,652,2410,,1,,99.1,2,65,,10.1208/s12249-012-9854-8.,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3513441/,,
+linamarin,,,,,168,247.24,-1.8,123,311,,1,,50,8,40,,,https://www.researchgate.net/publication/256762832_In_vitro_degradation_of_poly_D_L-lactide-co-glycolide_nanoparticles_loaded_with_linamarin,,
+linamarin,,,,,168,247.24,-1.8,123,311,,6,,52,8,57,,,https://www.researchgate.net/publication/256762832_In_vitro_degradation_of_poly_D_L-lactide-co-glycolide_nanoparticles_loaded_with_linamarin,,
+Tobramycin,,,17,,259.8,467.5,-6.2,268,609,,1,,95.8,122,21,,,https://drive.google.com/file/d/1EiSwFSadfA1RlLNro68NHMj4TGGivRK2/view?usp=sharing,,
+docetaxel,dichloromethane,0.02,20,,286.3,807.9,1.6,224,1660,,1,,60.5,72,37,,,https://drive.google.com/file/d/1VP330MZEX7tL9mATnarswwqbp5YNl55H/view?usp=sharing,,
+docetaxel,dichloromethane,0.02,10,,269.4,807.9,1.6,224,1660,,1,,97.4,,,,,https://drive.google.com/file/d/1VP330MZEX7tL9mATnarswwqbp5YNl55H/view?usp=sharing,,
+docetaxel,dichloromethane,0.02,5,,282.1,807.9,1.6,224,1660,,1,,49.7,,,,,https://drive.google.com/file/d/1VP330MZEX7tL9mATnarswwqbp5YNl55H/view?usp=sharing,,
+docetaxel,dichloromethane,0.02,4,,285.3,807.9,1.6,224,1660,,1,,38.7,,,,,https://drive.google.com/file/d/1VP330MZEX7tL9mATnarswwqbp5YNl55H/view?usp=sharing,,
+trastuzumab,,,35,,133.3,,,,,,1,,37.5,720,78,,,https://drive.google.com/file/d/11FSmbFCW66TuBmjp6TisrxDZHe8vyDpu/view?usp=sharing,,
+saponin β-aescin.,,,5,,215,,,,,,1,,,,,,,https://drive.google.com/file/d/16Lbb1-WS_Ht9KxcT1kXj5LZVltFuR5cO/view?usp=sharing,,
+Curcumin,ethyl acetate,,,,,368.4,3.2,93.1,507,,2,,,,,,,,,

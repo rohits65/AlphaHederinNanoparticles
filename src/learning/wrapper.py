@@ -45,7 +45,7 @@ def MPSGraph():
 
     for i in np.arange(1, 4, 1):
         pdrPlotData = []
-        for j in np.arange(0, 50, 1):
+        for j in np.arange(0, 30, 1):
             pdrPlotData.append(MPSData(j, i))
 
         fig.add_trace(go.Scatter(x=np.arange(0, 50, 1), y=pdrPlotData, name="L:G = " + str(i)))
@@ -116,7 +116,7 @@ def RRPercentage():
             for j in np.arange(100, 200, 1):
                 pdrPlotData.append(RRPercentageData(k, i, j)*100)
 
-            if i == 1 or i == 2 or i == 3:
+            if i == 1 or i == 2:
                 r = 1
             else:
                 r=2
@@ -138,23 +138,22 @@ def RRPercentage():
     return fig
 
 def RRRate():
-    fig = make_subplots(rows=2, cols=3)
+    fig = make_subplots(rows=2, cols=2)
 
     for i in range(1, 4):
         for k in np.arange(0, 101, 10):
             pdrPlotData = []
             for j in np.arange(100, 200, 1):
                 pdrPlotData.append(RRPercentageData(k, i, j)*100/RRHoursData(k, i, j))
-            if i == 1 or i == 2 or i == 3:
+            if i == 1 or i == 2:
                 r = 1
             else:
                 r=2
-            if i == 1 or i == 4:
+            if i == 1 or i == 3:
                 c = 1
             elif i == 2 or i == 5:
                 c=2
-            else:
-                c=3
+
 
             fig.add_trace(go.Scatter(x=np.arange(100, 200, 1), y=pdrPlotData, name="EE = " + str(k)), row=r, col=c)
         print(i)
@@ -167,12 +166,33 @@ def RRRate():
 
     return fig
 
+def RRPublishRate(lg=0):
+    fig = go.Figure()
 
-MPSGraph().show()
-EEGraph().show()
-RRPercentage().show()
-RRHours().show()
-RRRate().show()
+    for k in np.arange(60, 101, 10):
+        pdrPlotData = []
+        for j in np.arange(100, 200, 1):
+            pdrPlotData.append(RRPercentageData(k, lg, j)*100/RRHoursData(k, lg, j))
+
+
+
+        fig.add_trace(go.Scatter(x=np.arange(100, 200, 1), y=pdrPlotData, name="EE = " + str(k)))
+        fig.update_layout(
+            title="Effect of mean particle size and entrapment efficiency on release rate <br> slope (Percent released during burst/Time in burst phase) (lactide:glycolide = " + str(lg) + ")",
+            xaxis_title="Mean Particle Size",
+            yaxis_title="Release Rate Slope",
+
+        )
+
+    return fig
+
+# MPSGraph().show()
+# EEGraph().show()
+# RRPercentage().show()
+# RRHours().show()
+# RRRate().show()
+
+RRPublishRate(1).show()
 
 
 

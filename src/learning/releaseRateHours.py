@@ -46,7 +46,7 @@ model.add(Dense(units = 1))
 model.compile(optimizer = 'adam', loss = 'mean_squared_error')
 
 # Fitting the ANN to the Training set
-model.fit(X_train, y_train, batch_size = 50, epochs = 150, validation_data=(X_test, y_test))
+model.fit(X_train, y_train, batch_size = 80, epochs = 150, validation_data=(X_test, y_test))
 model.save("../savedStates/releaseRateHours_model.savedstate")
 
 model = load_model("../savedStates/releaseRateHours_model.savedstate")
@@ -54,8 +54,8 @@ dump(sc, "../savedStates/releaseRateHours_scaler.savedstate")
 
 y_pred = model.predict(X_test)
 
-plt.plot(y_test, color = 'red', label = 'Real data')
-plt.plot(y_pred, color = 'blue', label = 'Predicted data')
+plt.plot(y_test, color = 'blue', label = 'Real data')
+plt.plot(y_pred, color = 'red', label = 'Predicted data')
 plt.title('Prediction')
 plt.legend()
 plt.show()
