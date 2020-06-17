@@ -172,7 +172,7 @@ def RRPublishRate(lg=0):
     for k in np.arange(60, 101, 10):
         pdrPlotData = []
         for j in np.arange(100, 200, 1):
-            pdrPlotData.append(RRPercentageData(k, lg, j)*100/RRHoursData(k, lg, j))
+            pdrPlotData.append(RRPercentageData(k, lg, j)/RRHoursData(k, lg, j))
 
 
 
@@ -186,8 +186,8 @@ def RRPublishRate(lg=0):
 
     return fig
 
-# MPSGraph().show()
-# EEGraph().show()
+MPSGraph().show()
+EEGraph().show()
 # RRPercentage().show()
 # RRHours().show()
 # RRRate().show()

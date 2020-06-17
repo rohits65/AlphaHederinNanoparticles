@@ -43,7 +43,7 @@ model.add(Dense(units = 1, activation='sigmoid'))
 
 #model.add(Dense(1))
 # Compiling the ANN
-model.compile(optimizer = 'adam', loss = 'mean_squared_error')
+model.compile(optimizer = 'nadam', loss = 'mean_squared_error')
 
 # Fitting the ANN to the Training set
 model.fit(X_train, y_train, batch_size = 80, epochs = 700, validation_data=(X_test, y_test))

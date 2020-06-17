@@ -11,7 +11,7 @@ data = pd.read_csv("../../data/DrugData - main.csv").dropna(subset=['xlogP', 'EE
 # Get the columns associated with x, y
 x_values = data[['xlogP', 'EE', 'TPSA', 'MW', 'LToG', 'CX', 'MPS']].to_numpy().reshape(-1, 7)#[0:40]  # Change last num_params
 y_values = np.ravel(data[['RRPercent']].to_numpy())#[0:40] # .reshape(-1, 1)
-y_values = [val/100 for val in y_values]
+# y_values = [val/100 for val in y_values]
 
 X = x_values#dataset[:, :-1]
 y = y_values#dataset[:, -1]
@@ -39,14 +39,14 @@ model.add(Dense(units = 32, activation = 'relu'))
 
 # Adding the output layer
 
-model.add(Dense(units = 1, activation='sigmoid'))
+model.add(Dense(units = 1, activation='relu'))
 
 #model.add(Dense(1))
 # Compiling the ANN
-model.compile(optimizer = 'adam', loss = 'mean_squared_error')
+model.compile(optimizer = 'adagrad', loss = 'mean_absolute_error')
 
 # Fitting the ANN to the Training set
-model.fit(X_train, y_train, batch_size = 80, epochs = 200, validation_data=(X_test, y_test))
+model.fit(X_train, y_train, batch_size = 80, epochs = 500, validation_data=(X_test, y_test))
 model.save("../savedStates/releaseRatePercentage_model.savedstate")
 
 model = load_model("../savedStates/releaseRatePercentage_model.savedstate")
